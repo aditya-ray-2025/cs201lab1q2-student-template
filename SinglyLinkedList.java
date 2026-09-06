@@ -108,9 +108,7 @@ public class SinglyLinkedList<E> {
 
         while (current != null) {
             Node <E> next = current.getNext();
-
             current.setNext(previous);
-
             previous = current;
             current = next;
         }
