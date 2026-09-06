@@ -91,10 +91,10 @@ public class SinglyLinkedList<E> {
         }
 
         Node<E> current = head;
-        while (current.getNext().getNext() != null) {
+        while (current.getNext() != null) {
             current = current.getNext();
         }
-        E answer = current.getNext().getElement();
+        E answer = current.getElement();
         current.setNext(null);
         size --;
 
@@ -108,7 +108,9 @@ public class SinglyLinkedList<E> {
 
         while (current != null) {
             Node <E> next = current.getNext();
+
             current.setNext(previous);
+
             previous = current;
             current = next;
         }
